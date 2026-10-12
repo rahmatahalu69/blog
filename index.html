@@ -3,215 +3,337 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV - Fathir Airlangga Irawan</title>
+  <title>Portofolio CV - Fathir Airlangga Irawan</title>
+  
+  <!-- Menggunakan Font Modern Google Fonts -->
+  <link relTentu saja! Saya sangat mengerti permintaanmu. Kamu ingin tampilan CV web kamu tetap profesional tetapi memiliki sentuhan desain yang lebih modern, unik, dan "creatif", serta **tidak terlihat seperti dokumen kertas** biasa seperti pada gambar contoh sebelumnya.
+
+Ini adalah tantangan yang bagus! Untuk membuatnya lebih kreatif dan berbeda dari contoh sebelumnya, kita akan melakukan perubahan besar pada tata letak (layout) dan elemen visualnya.
+
+Berikut adalah pendekatan desain "Creatif" yang akan kita gunakan dalam kode baru ini:
+
+1.  **Layout Modern (Non-Kertas):** Kita tidak akan lagi menggunakan pembatas garis horizontal (`<hr>`) yang kaku. Kita akan menggunakan **pembagian bagian (section)** dengan warna latar belakang yang berbeda untuk menciptakan alur visual yang lebih mengalir.
+2.  **Hero Section:** Bagian atas (Nama & Kontak) akan dibuat seperti spanduk "Hero" minimalis dengan gradasi warna biru yang halus, memberikan kesan modern langsung saat halaman dibuka.
+3.  **Kartu Keahlian (Skill Tags):** Alih-alih daftar *bullet point* biasa di dua kolom, kita akan menampilkan keahlian (*skills*) dalam bentuk **"label" atau "pills"** berwarna yang rapi, membuatnya lebih mudah dibaca dan visually appealing.
+4.  **Timeline Visual:** Untuk bagian Pendidikan, kita akan menggunakan gaya **garis waktu (*timeline*)** vertikal minimalis untuk menunjukkan urutan kronologis dengan lebih jelas dan menarik.
+5.  **Ikon Visual:** Kita akan menambahkan ikon-ikon kecil yang relevan (seperti ikon email, lokasi, dan LinkedIn) untuk memberikan sentuhan visual yang modern.
+6.  **Bayangan Halus & Sudut Melengkung:** Kita akan menambahkan bayangan halus (*box-shadow*) pada bagian-bagian utama dan membuat sudut-sudutnya sedikit melengkung agar terlihat lebih lembut dan modern.
+
+Berikut adalah kodenya. Silakan salin seluruh kode di bawah ini, lalu tempelkan ke file `index.html` di repository GitHub kamu (gantikan kode sebelumnya).
+
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio CV - Fathir Airlangga Irawan</title>
+  
+  <!-- Menggunakan Font Modern Google Fonts -->
+  <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+  <link href="[https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@400;600&display=swap](https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@400;600&display=swap)" rel="stylesheet">
+  
+  <!-- Menambahkan Ikon Visual dari FontAwesome -->
+  <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css)">
+
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      background-color: #f0f2f5;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #333;
-      padding: 20px 0;
+      background-color: #f1f5f9;
+      font-family: 'Open Sans', sans-serif;
+      color: #334155;
+      line-height: 1.6;
     }
     .cv-container {
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 900px;
+      margin: 40px auto;
       background: #fff;
-      padding: 40px 50px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      overflow: hidden; /* Agar sudut melengkung terlihat */
     }
     
-    /* Header Kontak */
+    /* === Hero Section (Bagian Atas) === */
+    .hero {
+      background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%);
+      color: #fff;
+      padding: 60px 50px;
+      text-align: center;
+    }
     .contact-bar {
-      text-align: center;
       font-size: 13px;
-      color: #555;
-      margin-bottom: 15px;
       letter-spacing: 1px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
     }
-    .contact-bar span {
-      margin: 0 8px;
-    }
-
-    /* Nama Utama & Subtitle */
+    .contact-bar span { display: flex; align-items: center; gap: 8px; }
+    .contact-bar a { color: #fff; text-decoration: none; }
+    .contact-bar a:hover { text-decoration: underline; }
+    
     .header-name {
-      text-align: center;
-      font-size: 38px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 48px;
       font-weight: 900;
-      letter-spacing: 2px;
-      color: #1a1a1a;
+      letter-spacing: -1px;
       text-transform: uppercase;
       margin-bottom: 5px;
     }
     .header-title {
-      text-align: center;
+      font-family: 'Montserrat', sans-serif;
       font-size: 18px;
-      letter-spacing: 4px;
-      color: #1d4ed8;
+      letter-spacing: 3px;
       text-transform: uppercase;
       font-weight: 600;
-      margin-bottom: 20px;
+      color: #e0f2fe;
     }
 
-    /* Garis Pembatas */
-    .divider {
-      border: none;
-      height: 2px;
-      background-color: #1d4ed8;
-      margin: 20px 0;
-    }
+    /* === Section Styling (Latar Belakang Bergantian) === */
+    section { padding: 50px; }
+    section.odd { background-color: #f9fafb; }
 
-    /* Judul Seksi */
+    /* === Judul Bagian === */
     .section-title {
-      text-align: center;
-      font-size: 16px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
       font-weight: 700;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       color: #1d4ed8;
       text-transform: uppercase;
-      margin-bottom: 15px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background-color: #e2e8f0;
     }
 
-    /* Ringkasan Profil */
+    /* === Profile Summary === */
+    .summary-card {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      border-left: 4px solid #1d4ed8;
+    }
     .summary-text {
       text-align: justify;
-      font-size: 13.5px;
-      line-height: 1.6;
-      color: #444;
+      font-size: 14px;
+      line-height: 1.8;
     }
 
-    /* Grid 2 Kolom */
-    .two-column {
+    /* === Skills (Tampilan Tags) === */
+    .skills-container {
       display: flex;
-      gap: 30px;
+      gap: 40px;
     }
-    .column {
-      flex: 1;
+    .skills-group { flex: 1; }
+    .skills-group h4 {
+      font-size: 15px;
+      color: #1e293b;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
-    .vertical-divider {
-      width: 1px;
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skill-tag {
+      background-color: #e0f2fe;
+      color: #0284c7;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .skill-tag:hover {
       background-color: #1d4ed8;
+      color: #fff;
     }
 
-    /* Detail Item */
-    .item-title {
-      font-weight: 700;
-      font-size: 15px;
-      color: #1d4ed8;
+    /* === Education (Gaya Timeline) === */
+    .timeline {
+      position: relative;
+      padding-left: 30px;
     }
-    .item-subtitle {
-      font-size: 13px;
-      color: #666;
-      margin-bottom: 8px;
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background-color: #e2e8f0;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -35px;
+      top: 5px;
+      height: 12px;
+      width: 12px;
+      background-color: #1d4ed8;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 3px #e0f2fe;
     }
     .item-date {
-      float: right;
       font-size: 12px;
-      color: #666;
-    }
-
-    ul {
-      padding-left: 18px;
-      margin-top: 8px;
-    }
-    li {
-      font-size: 13px;
-      line-height: 1.5;
+      color: #64748b;
       margin-bottom: 5px;
-      color: #444;
+      display: block;
     }
-    a {
-      color: #1d4ed8;
-      text-decoration: none;
+    .item-title { font-weight: 700; font-size: 16px; color: #1e293b; }
+    .item-subtitle { font-size: 14px; color: #1d4ed8; margin-bottom: 10px; }
+    .item-details { list-style: none; padding-left: 0; }
+    .item-details li { font-size: 13px; color: #444; margin-bottom: 5px; position: relative; padding-left: 15px; }
+    .item-details li::before { content: '→'; position: absolute; left: 0; color: #1d4ed8; }
+
+    /* === Portfolio (Gaya Kartu) === */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
     }
-    a:hover {
-      text-decoration: underline;
+    .portfolio-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .portfolio-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      border-color: #1d4ed8;
+    }
+    .card-icon { font-size: 24px; color: #1d4ed8; margin-bottom: 20px; }
+    .card-title { font-size: 16px; font-weight: 700; color: #1e293b; margin-bottom: 10px; }
+    .card-text { font-size: 13px; color: #444; margin-bottom: 15px; }
+    .card-link { font-size: 13px; color: #1d4ed8; text-decoration: none; font-weight: 600; }
+    .card-link:hover { text-decoration: underline; }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      .cv-container { margin: 20px; }
+      .hero, section { padding: 30px; }
+      .header-name { font-size: 36px; }
+      .skills-container { flex-direction: column; gap: 30px; }
     }
   </style>
 </head>
 <body>
 
   <div class="cv-container">
-    <!-- Informasi Kontak -->
-    <div class="contact-bar">
-      Jakarta | <span>|</span> fathir.airlangga@gmail.com <span>|</span> <a href="https://www.linkedin.com/in/fathir-airlangga-irawan-29704b378/" target="_blank">LinkedIn Profile</a>
-    </div>
-
-    <!-- Nama & Judul -->
-    <h1 class="header-name">FATHIR AIRLANGGA</h1>
-    <div class="header-title">MAHASISWA SISTEM INFORMASI</div>
-
-    <hr class="divider">
-
-    <!-- Profile Summary -->
-    <div class="section-title">PROFILE SUMMARY</div>
-    <p class="summary-text">
-      Mahasiswa aktif semester 5 di Universitas Gunadarma dengan fokus pada pengembangan perangkat lunak dan pemrograman. Memiliki pemahaman dasar yang solid dalam bahasa C++ dan Python, serta antusias tinggi untuk terus mempelajari teknologi terbaru. Siap mengaplikasikan kemampuan logika dan problem solving dalam lingkungan kerja profesional maupun program magang.
-    </p>
-
-    <hr class="divider">
-
-    <!-- Skills 2 Kolom -->
-    <div class="two-column">
-      <div class="column">
-        <div class="section-title">PROFESSIONAL SKILL</div>
-        <ul>
-          <li><strong>Kemauan Belajar Tinggi:</strong> Cepat beradaptasi dan mempelajari teknologi serta lingkungan baru.</li>
-          <li><strong>Problem Solving:</strong> Mampu memecahkan masalah logika pemrograman secara terstruktur.</li>
-          <li><strong>Kerja Sama Tim:</strong> Terbiasa berkolaborasi dalam pengerjaan tugas dan proyek kuliah.</li>
-        </ul>
+    
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="contact-bar">
+        <span><i class="fas fa-map-marker-alt"></i> Jakarta</span>
+        <span><i class="fas fa-envelope"></i> fathir.airlangga@gmail.com</span>
+        <span><i class="fab fa-linkedin"></i> <a href="[https://www.linkedin.com/in/fathir-airlangga-irawan-29704b378/](https://www.linkedin.com/in/fathir-airlangga-irawan-29704b378/)" target="_blank">LinkedIn</a></span>
       </div>
+      <h1 class="header-name">FATHIR AIRLANGGA</h1>
+      <div class="header-title">MAHASISWA SISTEM INFORMASI</div>
+    </header>
 
-      <div class="vertical-divider"></div>
-
-      <div class="column">
-        <div class="section-title">TECHNICAL SKILL</div>
-        <ul>
-          <li><strong>Bahasa Pemrograman:</strong> Python, C++</li>
-          <li><strong>Konsep Dasar:</strong> Algoritma & Struktur Data, OOP</li>
-          <li><strong>Tools & Platform:</strong> Git, GitHub, VS Code</li>
-        </ul>
+    <!-- Profile Summary (Odd) -->
+    <section id="summary" class="odd">
+      <div class="section-title"><i class="fas fa-user"></i>PROFILE SUMMARY</div>
+      <div class="summary-card">
+        <p class="summary-text">
+          Mahasiswa aktif semester 5 di Universitas Gunadarma dengan fokus pada pengembangan perangkat lunak dan pemrograman. Memiliki pemahaman dasar yang solid dalam bahasa C++ dan Python, serta antusias tinggi untuk terus mempelajari teknologi terbaru. Siap mengaplikasikan kemampuan logika dan problem solving dalam lingkungan kerja profesional maupun program magang.
+        </p>
       </div>
-    </div>
+    </section>
 
-    <hr class="divider">
-
-    <!-- Education & Portfolio -->
-    <div class="two-column">
-      <div class="column">
-        <div class="section-title">EDUCATION</div>
-        
-        <span class="item-date">2024 - Sekarang</span>
-        <div class="item-title">Sarjana Sistem Informasi</div>
-        <div class="item-subtitle">Universitas Gunadarma</div>
-        <ul>
-          <li>Fokus pada pembelajaran algoritma, logika pemrograman, dan struktur data.</li>
-          <li>Aktif mengeksplorasi bahasa Python dan C++ secara mandiri.</li>
-        </ul>
-
-        <br>
-
-        <span class="item-date">Lulus 2024</span>
-        <div class="item-title">SMA 17 Agustus 1945</div>
-        <div class="item-subtitle">Tebet, Jakarta Selatan</div>
+    <!-- Skills (Tampilan Tags) (Even) -->
+    <section id="skills">
+      <div class="section-title"><i class="fas fa-cogs"></i>KEAHLIAN & SKILLS</div>
+      <div class="skills-container">
+        <div class="skills-group">
+          <h4>Programming</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Algoritma</span>
+            <span class="skill-tag">Struktur Data</span>
+            <span class="skill-tag">OOP</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <h4>Tools & Platform</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">VS Code</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <h4>Soft Skills</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Kerja Tim</span>
+            <span class="skill-tag">Fast Learner</span>
+            <span class="skill-tag">Problem Solving</span>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="vertical-divider"></div>
-
-      <div class="column">
-        <div class="section-title">PORTFOLIO</div>
-        
-        <div class="item-title">Proyek Pemrograman Mandiri</div>
-        <ul>
-          <li><strong>Repository GitHub:</strong> <a href="#">github.com/fathirairlangga</a></li>
-          <li><strong>Eksplorasi Python:</strong> Membuat program logika & skrip sederhana berbasis Python.</li>
-          <li><strong>Algoritma C++:</strong> Implementasi struktur data dasar dan pemecahan masalah algoritma.</li>
-        </ul>
+    <!-- Education (Gaya Timeline) (Odd) -->
+    <section id="education" class="odd">
+      <div class="section-title"><i class="fas fa-graduation-cap"></i>EDUCATION</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="item-date">2024 - Sekarang</span>
+          <p class="item-title">Sarjana Sistem Informasi</p>
+          <p class="item-subtitle">Universitas Gunadarma</p>
+          <ul class="item-details">
+            <li>Fokus pada pembelajaran algoritma dan pemrograman.</li>
+            <li>Aktif mengeksplorasi Python dan C++ secara mandiri.</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <span class="item-date">Lulus 2024</span>
+          <p class="item-title">SMA 17 Agustus 1945</p>
+          <p class="item-subtitle">Tebet, Jakarta Selatan</p>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Portfolio (Gaya Kartu) (Even) -->
+    <section id="portfolio">
+      <div class="section-title"><i class="fas fa-briefcase"></i>PORTFOLIO</div>
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <i class="fab fa-github card-icon"></i>
+          <h4 class="card-title">Proyek Pemrograman Mandiri</h4>
+          <p class="card-text">Kumpulan program logika dan skrip sederhana berbasis Python.</p>
+          <a href="#" class="card-link">Lihat di GitHub →</a>
+        </div>
+        <div class="portfolio-card">
+          <i class="fas fa-code-branch card-icon"></i>
+          <h4 class="card-title">Implementasi Algoritma C++</h4>
+          <p class="card-text">Eksplorasi struktur data dasar dan pemecahan masalah algoritma.</p>
+          <a href="#" class="card-link">Lihat di GitHub →</a>
+        </div>
+      </div>
+    </section>
 
   </div>
 
